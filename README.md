@@ -11,22 +11,22 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 1936
 3306
 
-# Añadimos a nustro docker-compose (#documentamos los puestos en apache):
-services:
-  lb:
-    image: dockercloud/haproxy
-    ports:
-      - 80:80
-      - 1936:1936
-    links:
-      - apache
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - frontend-network
+### Añadimos a nustro docker-compose (#documentamos los puestos en apache):
+###### services:
+######  lb:
+######    image: dockercloud/haproxy
+######    ports:
+######      - 80:80
+######      - 1936:1936
+######    links:
+######      - apache
+######    volumes:
+######      - /var/run/docker.sock:/var/run/docker.sock
+######    networks:
+######      - frontend-network
     
-# inciamos el docker compose:
+### inciamos el docker compose:
 docker-compose up --sacale apache=(numero de instancias que queramos)
-# inciamos con :1936
+### inciamos con :1936
 usuario:stats
 contraseña:stats
