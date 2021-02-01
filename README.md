@@ -12,21 +12,13 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 3306
 
 ### Añadimos a nustro docker-compose (#documentamos los puestos en apache):
- services:
-  lb:
-    image: dockercloud/haproxy
-    ports:
-      - 80:80
-      - 1936:1936
-    links:
-      - apache
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - frontend-network
+![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/3.PNG "imagen")
     
 ### inciamos el docker compose:
 docker-compose up --sacale apache=(numero de instancias que queramos)
 ### inciamos con :1936
 usuario:stats
 contraseña:stats
+![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/1.PNG "imagen")
+### tendremos toda la informacion general 
+![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/2.PNG "imagen")
