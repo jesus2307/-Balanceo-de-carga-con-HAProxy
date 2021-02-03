@@ -37,9 +37,6 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 <p><strong>Ejemplo:</strong></p>
 <p>En el siguiente ejemplo estaríamos iniciando todos los servicios que están definidos en el archivo <code>docker-compose.yml</code> y para el servicio de <code>wordpress</code> estaríamos creando <code>4</code> instancias.</p>
 <pre><code>docker-compose up --scale wordpress=4</code></pre>
-<h2 id="ejemplo-de-un-archivo-docker-compose.yml-con-un-balanceador-de-carga"><span class="header-section-number">1.2</span> Ejemplo de un archivo <code>docker-compose.yml</code> con un balanceador de carga</h2>
-<p>A continuación se muestra <strong>un fragmento</strong> de un archivo <code>docker-compose.yml</code> que incluye un servicio de balanceo de carga con <a href="http://www.haproxy.org/">HAProxy</a> que nos puede servir de ejemplo:</p>
-<pre><code>services:
 
 * En el siguiente ejemplo estaríamos iniciando todos los servicios que están definidos en el archivo docker-compose.yml y para el servicio de apache estaríamos creando 4 instancias.
 docker-compose up --sacale apache=4
