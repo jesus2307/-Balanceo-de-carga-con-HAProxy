@@ -14,35 +14,11 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 ### Añadimos a nustro docker-compose (#documentamos los puestos en apache):
 * A continuación se muestra un fragmento de un archivo docker-compose.yml que incluye un servicio de balanceo de carga con HAProxy que nos puede servir de ejemplo:
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/3.PNG "imagen")
-<1> Utilizaremos la imagen dockercloud/haproxy que está disponible en Docker Hub.
-
-<2> El puerto 80 será el puerto del servicio que queremos balancear.
-
-<3> El puerto 1936 nos permite acceder a una página web con información estadística del balanceador.
-
-<4> Creamos un enlace con el servicio que queremos balancear. Los enlaces permiten que los contenedores se descubran entre sí y transfieran de manera segura información sobre un contenedor a otro contenedor.
-
-<5> Es necesario montar el socket UNIX del Docker daemon (/var/run/docker.sock) para que el contenedor lb pueda comunicarse con el Docker daemon y obtener información del resto de contenedores.
-
 <p>&lt;1&gt; Utilizaremos la imagen <a href="https://hub.docker.com/r/dockercloud/haproxy">dockercloud/haproxy</a> que está disponible en <a href="https://hub.docker.com/">Docker Hub</a>.</p>
 <p>&lt;2&gt; El puerto 80 será el puerto del servicio que queremos balancear.</p>
 <p>&lt;3&gt; El puerto 1936 nos permite acceder a una página web con información estadística del balanceador.</p>
 <p>&lt;4&gt; Creamos un enlace con el servicio que queremos balancear. Los enlaces permiten que los contenedores se descubran entre sí y transfieran de manera segura información sobre un contenedor a otro contenedor.</p>
 <p>&lt;5&gt; Es necesario montar el socket UNIX del Docker daemon (/var/run/docker.sock) para que el contenedor <code>lb</code> pueda comunicarse con el Docker daemon y obtener información del resto de contenedores.</p>
-<h2 id="archivo-de-configuración-haproxy.cfg"><span class="header-section-number">1.3</span> Archivo de configuración <code>haproxy.cfg</code></h2>
-<p>El archivo de configuración que utiliza <a href="http://www.haproxy.org/">HAProxy</a> es <code>haproxy.cfg</code>.</p>
-<p>Localice el archivo <code>haproxy.cfg</code> dentro del contenedor que ejecuta el balanceo de carga y estudie los parámetros de configuración que está utilizando.</p>
-<h2 id="referencias"><span class="header-section-number">1.4</span> Referencias</h2>
-<ul>
-<li><a href="https://aulasoftwarelibre.github.io/taller-de-docker/dockerfile/">Ejemplo de balanceo de carga con HAProxy de una aplicación web con Redis y Flask</a>.</li>
-<li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts">An Introduction to HAProxy and Load Balancing Concepts</a>.</li>
-<li><a href="https://clouding.io/kb/balancear-servicio-web-con-haproxy/">Balancear servicio web con HAProxy en Ubuntu 18.04</a>.</li>
-<li><a href="http://cbonte.github.io/haproxy-dconv/2.2/intro.html">HAProxy. Starter guide</a>.</li>
-<li><a href="http://cbonte.github.io/haproxy-dconv/2.2/configuration.html">HAProxy. Configuration manual</a>.</li>
-<li><a href="https://httpd.apache.org/docs/2.4/programs/ab.html">ab - Apache HTTP server benchmarking tool</a>.</li>
-<li><a href="https://www.docker.com/">Docker</a></li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
-</ul>
 
 ### inciamos el docker compose:
 * En el siguiente ejemplo estaríamos iniciando todos los servicios que están definidos en el archivo docker-compose.yml y para el servicio de apache estaríamos creando 4 instancias.
