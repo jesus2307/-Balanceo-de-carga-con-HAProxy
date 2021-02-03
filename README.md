@@ -14,7 +14,15 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 ### Añadimos a nustro docker-compose (#documentamos los puestos en apache):
 * A continuación se muestra un fragmento de un archivo docker-compose.yml que incluye un servicio de balanceo de carga con HAProxy que nos puede servir de ejemplo:
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/3.PNG "imagen")
-    
+<1> Utilizaremos la imagen dockercloud/haproxy que está disponible en Docker Hub.
+
+<2> El puerto 80 será el puerto del servicio que queremos balancear.
+
+<3> El puerto 1936 nos permite acceder a una página web con información estadística del balanceador.
+
+<4> Creamos un enlace con el servicio que queremos balancear. Los enlaces permiten que los contenedores se descubran entre sí y transfieran de manera segura información sobre un contenedor a otro contenedor.
+
+<5> Es necesario montar el socket UNIX del Docker daemon (/var/run/docker.sock) para que el contenedor lb pueda comunicarse con el Docker daemon y obtener información del resto de contenedores.
 ### inciamos el docker compose:
 * En el siguiente ejemplo estaríamos iniciando todos los servicios que están definidos en el archivo docker-compose.yml y para el servicio de apache estaríamos creando 4 instancias.
 docker-compose up --sacale apache=4
