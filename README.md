@@ -6,13 +6,13 @@ En esta práctica vamos a modificar los archivos docker-compose.yml que hemos cr
 Posteriormente deberá realizar la implantación de ambos sitios web en Amazon Web Services (AWS) haciendo uso de contenedores Docker y de la herramienta Docker Compose.
 
 ### Abrir los puetos
-80
-8080
-1936
-3306
++ 80
++ 8080
++ 1936
++ 3306
 
 ### Añadimos a nustro docker-compose (#documentamos los puestos en apache):
-A continuación se muestra un fragmento de un archivo docker-compose.yml que incluye un servicio de balanceo de carga con HAProxy que nos puede servir de ejemplo:
+* A continuación se muestra un fragmento de un archivo docker-compose.yml que incluye un servicio de balanceo de carga con HAProxy que nos puede servir de ejemplo:
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/3.PNG "imagen")
     
 ### inciamos el docker compose:
