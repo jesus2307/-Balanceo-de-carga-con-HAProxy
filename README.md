@@ -16,7 +16,8 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/3.PNG "imagen")
     
 ### inciamos el docker compose:
-docker-compose up --sacale apache=(numero de instancias que queramos)
+* En el siguiente ejemplo estaríamos iniciando todos los servicios que están definidos en el archivo docker-compose.yml y para el servicio de apache estaríamos creando 4 instancias.
+docker-compose up --sacale apache=4
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/compose.PNG "imagen")
 ### inciamos con :1936
 usuario:stats
