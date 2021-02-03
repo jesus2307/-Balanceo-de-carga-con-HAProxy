@@ -1,4 +1,7 @@
 # iaw-practica-17
+<h1 id="práctica-17-balanceo-de-carga-con-haproxy"><span class="header-section-number">1</span> Práctica 17: Balanceo de carga con HAProxy</h1>
+<p>En esta práctica vamos a modificar los archivos <code>docker-compose.yml</code> que hemos creado en las prácticas <a href="https://josejuansanchez.org/iaw/practica-15/index.html">15</a> y <a href="https://josejuansanchez.org/iaw/practica-16/index.html">16</a>, y vamos a incluir un nuevo contenedor <a href="https://www.docker.com/">Docker</a> con <a href="http://www.haproxy.org/">HAProxy</a> para balancear la carga de los contenedores que ejecutan la aplicación web.</p>
+<p>Posteriormente deberá realizar la implantación de ambos sitios web en <a href="https://aws.amazon.com/es/">Amazon Web Services (AWS)</a> haciendo uso de contenedores <a href="https://www.docker.com/">Docker</a> y de la herramienta <a href="https://docs.docker.com/compose/">Docker Compose</a>.</p>
 
 # 1 Práctica 17: Balanceo de carga con HAProxy
 En esta práctica vamos a modificar los archivos docker-compose.yml que hemos creado en las prácticas 15 y 16, y vamos a incluir un nuevo contenedor Docker con HAProxy para balancear la carga de los contenedores que ejecutan la aplicación web.
