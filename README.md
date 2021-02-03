@@ -16,6 +16,7 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
     
 ### inciamos el docker compose:
 docker-compose up --sacale apache=(numero de instancias que queramos)
+![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/compose.PNG "imagen")
 ### inciamos con :1936
 usuario:stats
 contraseña:stats
