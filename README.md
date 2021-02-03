@@ -12,6 +12,7 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 3306
 
 ### Añadimos a nustro docker-compose (#documentamos los puestos en apache):
+A continuación se muestra un fragmento de un archivo docker-compose.yml que incluye un servicio de balanceo de carga con HAProxy que nos puede servir de ejemplo:
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/3.PNG "imagen")
     
 ### inciamos el docker compose:
