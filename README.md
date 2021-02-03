@@ -30,5 +30,5 @@ docker-compose up --sacale apache=4
 usuario:stats
 contraseña:stats
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/1.PNG "imagen")
-### Tendremos toda la informacion general 
+* Tendremos toda la informacion general 
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/captura3.PNG "imagen")
