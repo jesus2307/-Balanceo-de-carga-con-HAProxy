@@ -21,6 +21,35 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 <p>&lt;5&gt; Es necesario montar el socket UNIX del Docker daemon (/var/run/docker.sock) para que el contenedor <code>lb</code> pueda comunicarse con el Docker daemon y obtener información del resto de contenedores.</p>
 
 ### Inciamos el docker compose:
+
+<li><a href="#cómo-escalar-los-servicios-definidos-en-un-archivo-docker-compose.yml"><span class="toc-section-number">1.1</span> Cómo escalar los servicios definidos en un archivo <code>docker-compose.yml</code></a></li>
+<li><a href="#ejemplo-de-un-archivo-docker-compose.yml-con-un-balanceador-de-carga"><span class="toc-section-number">1.2</span> Ejemplo de un archivo <code>docker-compose.yml</code> con un balanceador de carga</a></li>
+<li><a href="#archivo-de-configuración-haproxy.cfg"><span class="toc-section-number">1.3</span> Archivo de configuración <code>haproxy.cfg</code></a></li>
+<li><a href="#referencias"><span class="toc-section-number">1.4</span> Referencias</a></li>
+</ul></li>
+<li><a href="#licencia"><span class="toc-section-number">2</span> Licencia</a></li>
+</ul>
+</nav>
+
+<h1 id="práctica-17-balanceo-de-carga-con-haproxy"><span class="header-section-number">1</span> Práctica 17: Balanceo de carga con HAProxy</h1>
+<p>En esta práctica vamos a modificar los archivos <code>docker-compose.yml</code> que hemos creado en las prácticas <a href="https://josejuansanchez.org/iaw/practica-15/index.html">15</a> y <a href="https://josejuansanchez.org/iaw/practica-16/index.html">16</a>, y vamos a incluir un nuevo contenedor <a href="https://www.docker.com/">Docker</a> con <a href="http://www.haproxy.org/">HAProxy</a> para balancear la carga de los contenedores que ejecutan la aplicación web.</p>
+<p>Posteriormente deberá realizar la implantación de ambos sitios web en <a href="https://aws.amazon.com/es/">Amazon Web Services (AWS)</a> haciendo uso de contenedores <a href="https://www.docker.com/">Docker</a> y de la herramienta <a href="https://docs.docker.com/compose/">Docker Compose</a>.</p>
+<h2 id="cómo-escalar-los-servicios-definidos-en-un-archivo-docker-compose.yml"><span class="header-section-number">1.1</span> Cómo escalar los servicios definidos en un archivo <code>docker-compose.yml</code></h2>
+<p>Cuando ejecutamos <code>docker-compose</code> tenemos la posibilidad de indicar el número de instancias que queremos tener de cada uno de los servicios que vamos a crear.</p>
+<p>El comando sería el siguiente:</p>
+<pre><code>docker-compose up --scale SERVICE=NUM</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>SERVICE</code> es el nombre del servicio que queremos escalar</li>
+<li><code>NUM</code> es el número de instancias que queremos tener de ese servicio.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>En el siguiente ejemplo estaríamos iniciando todos los servicios que están definidos en el archivo <code>docker-compose.yml</code> y para el servicio de <code>wordpress</code> estaríamos creando <code>4</code> instancias.</p>
+<pre><code>docker-compose up --scale wordpress=4</code></pre>
+<h2 id="ejemplo-de-un-archivo-docker-compose.yml-con-un-balanceador-de-carga"><span class="header-section-number">1.2</span> Ejemplo de un archivo <code>docker-compose.yml</code> con un balanceador de carga</h2>
+<p>A continuación se muestra <strong>un fragmento</strong> de un archivo <code>docker-compose.yml</code> que incluye un servicio de balanceo de carga con <a href="http://www.haproxy.org/">HAProxy</a> que nos puede servir de ejemplo:</p>
+<pre><code>services:
+
 * En el siguiente ejemplo estaríamos iniciando todos los servicios que están definidos en el archivo docker-compose.yml y para el servicio de apache estaríamos creando 4 instancias.
 docker-compose up --sacale apache=4
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/compose.PNG "imagen")
