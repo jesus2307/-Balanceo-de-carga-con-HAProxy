@@ -20,7 +20,7 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 docker-compose up --sacale apache=4
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/compose.PNG "imagen")
 ### Si inciamos nuesto navegador con nustra ip aparcera nustra pila lamp
-![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/capturass.PNGG "imagen")
+![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/capturass.PNG "imagen")
 ### i inciamos nuesto navegador con nustra ip con :1936
 usuario:stats
 contraseña:stats
