@@ -20,9 +20,8 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 <p>&lt;4&gt; Creamos un enlace con el servicio que queremos balancear. Los enlaces permiten que los contenedores se descubran entre sí y transfieran de manera segura información sobre un contenedor a otro contenedor.</p>
 <p>&lt;5&gt; Es necesario montar el socket UNIX del Docker daemon (/var/run/docker.sock) para que el contenedor <code>lb</code> pueda comunicarse con el Docker daemon y obtener información del resto de contenedores.</p>
 
-### Inciamos el docker compose:
 
-<h2 id="cómo-escalar-los-servicios-definidos-en-un-archivo-docker-compose.yml"><span class="header-section-number">1.1</span> Cómo escalar los servicios definidos en un archivo <code>docker-compose.yml</code></h2>
+<h2 id="cómo-escalar-los-servicios-definidos-en-un-archivo-docker-compose.yml"><span class="header-section-number"></span> Cómo escalar los servicios definidos en un archivo <code>docker-compose.yml</code></h2>
 <p>Cuando ejecutamos <code>docker-compose</code> tenemos la posibilidad de indicar el número de instancias que queremos tener de cada uno de los servicios que vamos a crear.</p>
 <p>El comando sería el siguiente:</p>
 <pre><code>docker-compose up --scale SERVICE=NUM</code></pre>
