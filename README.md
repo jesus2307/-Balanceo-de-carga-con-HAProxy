@@ -22,4 +22,4 @@ usuario:stats
 contraseña:stats
 ![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/1.PNG "imagen")
 ### tendremos toda la informacion general 
-![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/2.PNG "imagen")
+![imagen](https://github.com/jesus2307/iaw-practica-17/blob/main/imagen/captura3.PNG "imagen")
