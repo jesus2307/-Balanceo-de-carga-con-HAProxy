@@ -22,15 +22,6 @@ Posteriormente deberá realizar la implantación de ambos sitios web en Amazon W
 
 ### Inciamos el docker compose:
 
-<li><a href="#cómo-escalar-los-servicios-definidos-en-un-archivo-docker-compose.yml"><span class="toc-section-number">1.1</span> Cómo escalar los servicios definidos en un archivo <code>docker-compose.yml</code></a></li>
-<li><a href="#ejemplo-de-un-archivo-docker-compose.yml-con-un-balanceador-de-carga"><span class="toc-section-number">1.2</span> Ejemplo de un archivo <code>docker-compose.yml</code> con un balanceador de carga</a></li>
-<li><a href="#archivo-de-configuración-haproxy.cfg"><span class="toc-section-number">1.3</span> Archivo de configuración <code>haproxy.cfg</code></a></li>
-<li><a href="#referencias"><span class="toc-section-number">1.4</span> Referencias</a></li>
-</ul></li>
-<li><a href="#licencia"><span class="toc-section-number">2</span> Licencia</a></li>
-</ul>
-</nav>
-
 <h1 id="práctica-17-balanceo-de-carga-con-haproxy"><span class="header-section-number">1</span> Práctica 17: Balanceo de carga con HAProxy</h1>
 <p>En esta práctica vamos a modificar los archivos <code>docker-compose.yml</code> que hemos creado en las prácticas <a href="https://josejuansanchez.org/iaw/practica-15/index.html">15</a> y <a href="https://josejuansanchez.org/iaw/practica-16/index.html">16</a>, y vamos a incluir un nuevo contenedor <a href="https://www.docker.com/">Docker</a> con <a href="http://www.haproxy.org/">HAProxy</a> para balancear la carga de los contenedores que ejecutan la aplicación web.</p>
 <p>Posteriormente deberá realizar la implantación de ambos sitios web en <a href="https://aws.amazon.com/es/">Amazon Web Services (AWS)</a> haciendo uso de contenedores <a href="https://www.docker.com/">Docker</a> y de la herramienta <a href="https://docs.docker.com/compose/">Docker Compose</a>.</p>
